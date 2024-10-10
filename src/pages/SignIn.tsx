@@ -12,7 +12,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { cn } from '@/lib/utils'
 
-export const Login = () => {
+export const SignIn = () => {
   return (
     <div
       className="flex-1 bg-gradient-to-b lg:bg-gradient-to-r from-primary to-background lg:from-[65%] lg:to-[35%] 

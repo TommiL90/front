@@ -9,9 +9,6 @@ import {
 export default function Sample() {
   return (
     <>
-      <PageHeader>
-        <PageHeaderHeading>Sample Page</PageHeaderHeading>
-      </PageHeader>
       <Card>
         <CardHeader>
           <CardTitle>Card Title</CardTitle>

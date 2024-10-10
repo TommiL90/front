@@ -12,29 +12,19 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { cn } from '@/lib/utils'
 
-export const Login = () => {
+export const SignUp = () => {
   return (
     <div
-      className="flex-1 bg-gradient-to-b lg:bg-gradient-to-r from-primary to-background lg:from-[65%] lg:to-[35%] 
+      className="relative flex-1 bg-gradient-to-b lg:bg-gradient-to-l from-primary to-background lg:from-[65%] lg:to-[35%] 
 "
     >
-      <div className="container w-full min-h-screen lg:grid lg:grid-cols-2">
-        <div className="flex items-center justify-center py-12">
-          <div className="w-full text-primary-foreground lg:w-[435px] mb-8 lg:mb-0 space-y-4">
-            <Logo size="lg" />
-            <Heading as="h1" size="md">
-              O jeito fácil, grátis
-            </Heading>
-            <p className={cn(subtitle())}>
-              flexível e atrativo de gerenciar seus projetos em uma única
-              plataforma.
-            </p>
-          </div>
-        </div>
+      <div className="container flex flex-col-reverse w-full min-h-screen lg:flex-row lg:grid lg:grid-cols-2">
         <div className="flex items-center justify-center py-12">
           <Card className="container w-full md:w-[480px] py-12 ">
             <CardHeader>
-              <CardTitle className={cn(titleVariants({size:"md"}))}>Sign Up</CardTitle>
+              <CardTitle className={cn(titleVariants({ size: 'md' }))}>
+                Sign Up
+              </CardTitle>
               <CardDescription>
                 Enter your information to create an account
               </CardDescription>
@@ -69,17 +59,35 @@ export const Login = () => {
                 </Button>
               </div>
               <div className="mt-4">
-               <p className='mb-4 text-sm text-center text-card-foreground'> Already have an account?{' '}</p>
-                <a href="/signup" className={buttonVariants({
-                  variant: "outline",
-                  className: "w-full",
-                  size: "lg",
-                })}>
+                <p className="mb-4 text-sm text-center text-card-foreground">
+                  {' '}
+                  Already have an account?{' '}
+                </p>
+                <a
+                  href="/signup"
+                  className={buttonVariants({
+                    variant: 'outline',
+                    className: 'w-full',
+                    size: 'lg',
+                  })}
+                >
                   Sign in
                 </a>
               </div>
             </CardContent>
           </Card>
+        </div>
+        <div className="flex items-center justify-center py-12">
+          <div className="w-full text-primary-foreground lg:w-[435px] mb-8 lg:mb-0 space-y-4">
+            <Logo size="lg" />
+            <Heading as="h1" size="md">
+              O jeito fácil, grátis
+            </Heading>
+            <p className={cn(subtitle())}>
+              flexível e atrativo de gerenciar seus projetos em uma única
+              plataforma.
+            </p>
+          </div>
         </div>
       </div>
     </div>

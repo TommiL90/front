@@ -6,7 +6,8 @@ import NoMatch from './pages/NoMatch'
 import Dashboard from './pages/Dashboard'
 import Empty from './pages/Empty'
 import Sample from './pages/Sample'
-import { Login } from './pages/SignIn'
+import { SignIn } from './pages/SignIn'
+import { SignUp } from './pages/SignInUp'
 
 export const router = createBrowserRouter(
   [
@@ -29,8 +30,12 @@ export const router = createBrowserRouter(
       ],
     },
     {
-      path: '/login',
-      element: <Login/>,
+      path: '/signin',
+      element: <SignIn />,
+    },
+    {
+      path: '/signup',
+      element: <SignUp />,
     },
     {
       path: '*',
