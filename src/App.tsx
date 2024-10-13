@@ -1,5 +1,5 @@
 import { RouterProvider } from 'react-router-dom'
-import { router } from './Router'
+import { router } from './router'
 import { SWRConfig } from 'swr'
 
 import { TailwindIndicator } from './components/tailwind-indicator'

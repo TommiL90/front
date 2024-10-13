@@ -1,7 +1,7 @@
 import { buttonVariants } from '@/components/ui/button'
 import { NavLink } from 'react-router-dom'
 
-export default function NoMatch() {
+export const NoMatch = () => {
   return (
     <div className="flex items-center justify-center flex-grow bg-background text-foreground">
       <div className="space-y-4">

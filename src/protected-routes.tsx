@@ -3,7 +3,6 @@ import { isTokenValid } from './lib/validate-token'
 
 export const ProtectedRoutes: React.FC = () => {
   const token = localStorage.getItem('@to-do:Token')
-  console.log(token)
 
   if (!token || !isTokenValid(token)) {
     return <Navigate to="/signin" replace />

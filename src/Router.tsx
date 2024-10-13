@@ -1,14 +1,13 @@
 import { createBrowserRouter } from 'react-router-dom'
 
-import { Applayout } from './components/layouts/AppLayout'
+import { Applayout } from './components/layouts/app-layout'
 
-import NoMatch from './pages/NoMatch'
-import Dashboard from './pages/Dashboard'
-import Empty from './pages/Empty'
-import Sample from './pages/Sample'
-import { SignUp } from './pages/SignInUp'
+import { Profile } from './pages/profile'
 import { SignIn } from './pages/signin'
 import { ProtectedRoutes } from './protected-routes'
+import { SignUp } from './pages/signup'
+import { Dashboard } from './pages/dashboard'
+import { NoMatch } from './pages/no-match'
 
 export const router = createBrowserRouter(
   [
@@ -25,12 +24,8 @@ export const router = createBrowserRouter(
               element: <Dashboard />,
             },
             {
-              path: 'sample',
-              element: <Sample />,
-            },
-            {
-              path: 'empty',
-              element: <Empty />,
+              path: 'profile',
+              element: <Profile />,
             },
           ],
         },
