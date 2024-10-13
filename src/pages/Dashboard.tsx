@@ -72,7 +72,7 @@ export default function Dashboard() {
         {Array.from({ length: 10 }).map((_, index) => (
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
           <Card key={index}>
-            <CardHeader className='flex flex-row'>
+            <CardHeader className="flex flex-row">
               <div className="space-y-4">
                 <CardTitle>
                   {' '}
@@ -89,7 +89,7 @@ export default function Dashboard() {
                   </ul>
                 </CardDescription>
               </div>
-              <div className='flex gap-2'>
+              <div className="flex gap-2">
                 <Button variant="outline" size="icon">
                   {' '}
                   <TrashIcon className="w-6 h-6" />

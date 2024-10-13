@@ -24,19 +24,16 @@ const titleVariants = cva('bg-clip-text font-semibold', {
   },
 })
 
-const subtitle = cva(
-  'my-2 text-sm font-medium md:text-lg',
-  {
-    variants: {
-      fullWidth: {
-        true: '!w-full',
-      },
+const subtitle = cva('my-2 text-sm font-medium md:text-lg', {
+  variants: {
+    fullWidth: {
+      true: '!w-full',
     },
-    defaultVariants: {
-      fullWidth: true,
-    },
-  }
-)
+  },
+  defaultVariants: {
+    fullWidth: true,
+  },
+})
 
 type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 

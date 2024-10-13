@@ -35,7 +35,10 @@ export const Logo = ({ className, size, ...props }: LogoProps) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Do it"
-      className={cn(logoVariants({ size, className }), 'pointer-events-none -mx-4')}
+      className={cn(
+        logoVariants({ size, className }),
+        'pointer-events-none -mx-4'
+      )}
       {...props}
     >
       <title>Logo Do it</title>
