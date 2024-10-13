@@ -95,7 +95,7 @@ export const SignIn = () => {
 
       console.log(tokenDecoded)
       
-      //navigate('/')
+      navigate('/')
     } catch (error) {
 
       if (error instanceof AxiosError) {

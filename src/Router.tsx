@@ -8,24 +8,31 @@ import Empty from './pages/Empty'
 import Sample from './pages/Sample'
 import { SignUp } from './pages/SignInUp'
 import { SignIn } from './pages/signin'
+import { ProtectedRoutes } from './protected-routes'
 
 export const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <Applayout />,
+      element: <ProtectedRoutes />,
       children: [
         {
           path: '',
-          element: <Dashboard />,
-        },
-        {
-          path: 'sample',
-          element: <Sample />,
-        },
-        {
-          path: 'empty',
-          element: <Empty />,
+          element: <Applayout />,
+          children: [
+            {
+              path: '',
+              element: <Dashboard />,
+            },
+            {
+              path: 'sample',
+              element: <Sample />,
+            },
+            {
+              path: 'empty',
+              element: <Empty />,
+            },
+          ],
         },
       ],
     },
