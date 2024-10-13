@@ -21,7 +21,7 @@ import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
 import { fetcher } from '@/services/fetcher'
 import useSWR from 'swr'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -53,7 +53,7 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>
 
 export const SignIn = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const { data, error } = useSWR('/', fetcher)
 
   if (data) {
@@ -78,7 +78,6 @@ export const SignIn = () => {
         arg: values,
       })
 
-      
       toast.success('Login successful! 🎉', {
         id: toastId,
       })
@@ -89,15 +88,13 @@ export const SignIn = () => {
 
       const username = tokenDecoded.sub as string
 
-      localStorage.setItem('@to-do:Token', token);
-      localStorage.setItem('@to-do:username', username);
-      
+      localStorage.setItem('@to-do:Token', token)
+      localStorage.setItem('@to-do:username', username)
 
       console.log(tokenDecoded)
-      
+
       navigate('/')
     } catch (error) {
-
       if (error instanceof AxiosError) {
         console.log(error)
         toast.warning(`${error.response?.data} 😢`, {
@@ -188,7 +185,6 @@ export const SignIn = () => {
                     className="w-full"
                     size="lg"
                     disabled={isSubmitting}
-                    
                   >
                     {isSubmitting ? 'Loading...' : 'Login'}
                   </Button>

@@ -6,7 +6,7 @@ export const creator = async <T, V>(
     arg,
   }: {
     arg: T
-  },
+  }
 ): Promise<V> => {
   const response = await api.post<V>(url, arg, {
     headers: {

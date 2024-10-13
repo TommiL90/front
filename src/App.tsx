@@ -5,8 +5,6 @@ import { SWRConfig } from 'swr'
 import { TailwindIndicator } from './components/tailwind-indicator'
 import { Toaster } from 'sonner'
 
-
-
 export default function App() {
   return (
     <SWRConfig
@@ -15,10 +13,7 @@ export default function App() {
       }}
     >
       <RouterProvider router={router} />
-      <Toaster 
-      richColors={true} 
-      expand={true} 
-      position="top-right" />
+      <Toaster richColors={true} expand={true} position="top-right" />
       <TailwindIndicator />
     </SWRConfig>
   )

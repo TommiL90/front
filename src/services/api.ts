@@ -6,8 +6,7 @@ const api = axios.create({
 })
 
 api.interceptors.request.use(
-  async (config) => {
-    
+  async config => {
     const token = localStorage.getItem('@to-do:Token')
 
     if (token) {
@@ -16,9 +15,9 @@ api.interceptors.request.use(
 
     return config
   },
-  (error) => {
+  error => {
     return Promise.reject(error)
-  },
+  }
 )
 
 export default api
