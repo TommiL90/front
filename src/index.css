@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 240, 5.88%, 96.67%;
@@ -78,7 +77,6 @@
     --chart-5: 340 75% 55%;
   }
 }
-
 
 @layer base {
   * {

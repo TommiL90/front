@@ -1,6 +1,25 @@
 import { RouterProvider } from 'react-router-dom'
 import { router } from './Router'
+import { SWRConfig } from 'swr'
+
+import { TailwindIndicator } from './components/tailwind-indicator'
+import { Toaster } from 'sonner'
+
+
 
 export default function App() {
-  return <RouterProvider router={router} />
+  return (
+    <SWRConfig
+      value={{
+        dedupingInterval: 30000,
+      }}
+    >
+      <RouterProvider router={router} />
+      <Toaster 
+      richColors={true} 
+      expand={true} 
+      position="top-right" />
+      <TailwindIndicator />
+    </SWRConfig>
+  )
 }

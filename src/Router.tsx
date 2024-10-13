@@ -6,8 +6,8 @@ import NoMatch from './pages/NoMatch'
 import Dashboard from './pages/Dashboard'
 import Empty from './pages/Empty'
 import Sample from './pages/Sample'
-import { SignIn } from './pages/SignIn'
 import { SignUp } from './pages/SignInUp'
+import { SignIn } from './pages/signin'
 
 export const router = createBrowserRouter(
   [
