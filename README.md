@@ -28,7 +28,7 @@ After setting up the backend, follow these steps to set up and run the frontend 
 
 1. Clone this repository:
    ```
-   git clone <your-frontend-repo-url>
+   git clone https://github.com/TommiL90/react-shadcn-todo-app.git
    ```
 
 2. Navigate to the project directory:
